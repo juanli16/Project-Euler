@@ -23,7 +23,6 @@ def fib(n):
             return fib1+fib2
         elif((fibTable.size)/2==(n-2)):
             #That means fib(n-2) exits and not fib n-1)
-            #print("We are here")
             fib2=fibTable[n-3][1]
             fib1=fib(n-1)
             fibTable=np.append(fibTable,[n,fib1+fib2])
@@ -31,7 +30,6 @@ def fib(n):
             return (fib1+fib2)
         else:
             fib2=fib(n-2)
-            #print(fib2)
             fib1=fib(n-1)
             fibTable=np.append(fibTable,[n,fib1+fib2])
             fibTable=np.reshape(fibTable,(-1,2))
